@@ -2,7 +2,7 @@
 
 [Tchin](https://tchin.tech) est une plateforme de paiement d'Afrique de l'Ouest (Togo, Bénin, Burkina Faso) : Mobile Money, compte Tchin et crypto, en francs CFA. Ce plugin relie Claude à Tchin : payer un lien Tchin sur tchin.tech, lire son compte, faire un relevé PDF, créer des liens de paiement, relancer les impayés et vendre sur WhatsApp. Tchin est une solution de [Wintg](https://wintg.group), à Lomé.
 
-*English summary: Tchin is a West African payment platform (Togo, Benin, Burkina Faso). This plugin connects Claude to Tchin's MCP server and adds four French-language skills: using Tchin well, bookkeeping and PDF statements, payment reminders, and selling on WhatsApp with payment links. Payments always happen on tchin.tech; the plugin never sends, withdraws or transfers money.*
+*English summary: Tchin is a West African payment platform (Togo, Benin, Burkina Faso). This plugin connects Claude to Tchin's MCP server and adds 22 French-language skills: for every Tchin user (using Tchin well, bookkeeping and PDF statements, payment reminders, selling on WhatsApp with payment links) and for developers integrating the Tchin API (getting started, keys, payments, subscriptions, payouts, identity checks, webhooks, testing without real money, go-live checklist). Payments always happen on tchin.tech; the plugin never sends, withdraws or transfers money.*
 
 ## Ce que contient le plugin
 
