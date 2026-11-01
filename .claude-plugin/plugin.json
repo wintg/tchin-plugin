@@ -11,6 +11,7 @@
   "homepage": "https://doc.wintg.group/tchin/ia/",
   "repository": "https://github.com/wintg/tchin-plugin",
   "privacyPolicyUrl": "https://tchin.tech/legal#confidentialite",
+  "termsOfServiceUrl": "https://tchin.tech/legal#cgu",
   "license": "MIT",
   "keywords": [
     "tchin",
