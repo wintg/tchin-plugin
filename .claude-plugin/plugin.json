@@ -1,7 +1,7 @@
 {
   "name": "tchin",
   "displayName": "Tchin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tchin payments (Togo, Benin, Burkina Faso): pay a Tchin link on tchin.tech, read your account and history, PDF statements, payment links, sales, reminders and WhatsApp selling. In French.",
   "author": {
     "name": "Wintg",
@@ -10,6 +10,15 @@
   },
   "homepage": "https://doc.wintg.group/tchin/ia/",
   "repository": "https://github.com/wintg/tchin-plugin",
+  "privacyPolicyUrl": "https://tchin.tech/legal#confidentialite",
   "license": "MIT",
-  "keywords": ["tchin", "payments", "mobile-money", "fcfa", "west-africa", "statements", "payment-links"]
+  "keywords": [
+    "tchin",
+    "payments",
+    "mobile-money",
+    "fcfa",
+    "west-africa",
+    "statements",
+    "payment-links"
+  ]
 }

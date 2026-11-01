@@ -15,9 +15,12 @@ Pour aller plus vite : la connaissance de Tchin dans votre assistant de code, de
 Des fiches de connaissance installées dans votre projet : une fiche d'entrée dit à l'assistant laquelle lire selon la demande (paiements, abonnements, versements, identité, webhooks, MCP…), et chaque fiche a sa référence complète (champs, code dans chaque langage, réponses). L'assistant lit d'abord la fiche courte, la référence seulement si besoin.
 
 ```texte
-curl -fsSL https://tchin.tech/outils/tchin-skills.js -o tchin-skills.js
-node tchin-skills.js add                                   # détecte vos assistants
-node tchin-skills.js add --frameworks claude-code,cursor   # ou choisissez
+curl -fsSL https://tchin.tech/outils/tchin-skills.js -o tchin-skills.js
+
+node tchin-skills.js add                                   # détecte vos assistants
+
+node tchin-skills.js add --frameworks claude-code,cursor   # ou choisissez
+
 node tchin-skills.js remove                                # tout retirer
 ```
 
@@ -72,9 +75,12 @@ Les quatre ensemble : tchin-skills-ia.zip.
 | `Toute IA compatible MCP` | Le serveur les sert aussi comme **prompts** : `tchin-bien-utiliser`, `tchin-comptable`, `tchin-relances`, `tchin-vendre-whatsapp` (avec un argument `demande` facultatif), dans le menu des prompts de votre IA. |
 
 ```curl
-curl -X POST https://tchin.tech/mcp \
-  -H "Content-Type: application/json" \
-  -d '{ "jsonrpc": "2.0", "id": 1, "method": "prompts/get",
+curl -X POST https://tchin.tech/mcp \
+
+  -H "Content-Type: application/json" \
+
+  -d '{ "jsonrpc": "2.0", "id": 1, "method": "prompts/get",
+
         "params": { "name": "tchin-comptable", "arguments": { "demande": "le bilan d’octobre" } } }'
 ```
 
@@ -83,29 +89,52 @@ curl -X POST https://tchin.tech/mcp \
 Les fonctions de l'API Tchin pour votre agent, par appel de fonctions : créer un paiement, un abonnement, un versement, une vérification d'identité, lire leur état et votre solde. Node 18+, sans dépendance, **côté serveur seulement**.
 
 ```js
-const { TchinAgentToolkit } = require('./tchin-agent-toolkit');
-const tchin = new TchinAgentToolkit(process.env.TCHIN_PUBLIC_KEY, process.env.TCHIN_PRIVATE_KEY, {
-  env: 'test',          // 'live' pour de vrai
-  sansVersement: true,  // pas d'argent sortant (conseillé pour un agent public)
-});
-
-// OpenAI Chat Completions
-const r = await openai.chat.completions.create({ model: 'gpt-5', messages, tools: tchin.getTools() });
-for (const appel of r.choices[0].message.tool_calls || []) {
-  const resultat = await tchin.executer(appel.function.name, appel.function.arguments);
-  messages.push({ role: 'tool', tool_call_id: appel.id, content: JSON.stringify(resultat) });
-}
-
-// OpenAI Agents SDK
-const { Agent, tool } = require('@openai/agents');
-const agent = new Agent({ name: 'Caisse', instructions: 'Tu aides les clients à payer.', tools: tchin.getAgentTools(tool) });
-
-// Vercel AI SDK
-const { tool: outil, jsonSchema } = require('ai');
-const tools = tchin.getVercelTools(outil, jsonSchema);
-
-// LangChain
-const { tool: lcTool } = require('@langchain/core/tools');
+const { TchinAgentToolkit } = require('./tchin-agent-toolkit');
+
+const tchin = new TchinAgentToolkit(process.env.TCHIN_PUBLIC_KEY, process.env.TCHIN_PRIVATE_KEY, {
+
+  env: 'test',          // 'live' pour de vrai
+
+  sansVersement: true,  // pas d'argent sortant (conseillé pour un agent public)
+
+});
+
+
+
+// OpenAI Chat Completions
+
+const r = await openai.chat.completions.create({ model: 'gpt-5', messages, tools: tchin.getTools() });
+
+for (const appel of r.choices[0].message.tool_calls || []) {
+
+  const resultat = await tchin.executer(appel.function.name, appel.function.arguments);
+
+  messages.push({ role: 'tool', tool_call_id: appel.id, content: JSON.stringify(resultat) });
+
+}
+
+
+
+// OpenAI Agents SDK
+
+const { Agent, tool } = require('@openai/agents');
+
+const agent = new Agent({ name: 'Caisse', instructions: 'Tu aides les clients à payer.', tools: tchin.getAgentTools(tool) });
+
+
+
+// Vercel AI SDK
+
+const { tool: outil, jsonSchema } = require('ai');
+
+const tools = tchin.getVercelTools(outil, jsonSchema);
+
+
+
+// LangChain
+
+const { tool: lcTool } = require('@langchain/core/tools');
+
 const lcTools = tchin.getLangChainTools(lcTool);
 ```
 
@@ -124,22 +153,29 @@ Télécharger le toolkit · aussi sur `https://tchin.tech/outils/tchin-agent-too
 
 ## CLI tchin
 
-```texte
-curl -fsSL https://tchin.tech/outils/install.sh | sh        # macOS, Linux
-irm https://tchin.tech/outils/install.ps1 | iex             # Windows (PowerShell)
-```
+Installation en deux temps : téléchargez le script sur https://tchin.tech/outils/ (`install.sh` pour macOS et Linux, `install.ps1` pour Windows), lisez-le et comparez son empreinte avec https://tchin.tech/outils/SHA256SUMS.txt, puis lancez-le. Node.js 18 ou plus est requis.
 
 ```texte
-tchin configurer --publique tchin_pk_... --secrete tchin_sk_... --test
-tchin solde
-tchin paiement creer --montant 5000 --description "Commande 42"
-tchin paiement etat y20vcyegjk85bs
-tchin abonnement creer --montant 10000 --offre "Pro" --intervalle monthly
-tchin abonnement liste --statut active
-tchin abonnement resilier sub_xxx --oui
-tchin versement creer --montant 2000 --email client@exemple.com --oui
-tchin kyc creer --reference client-42
-tchin webhook verifier --fichier data.json
+tchin configurer --publique tchin_pk_... --secrete tchin_sk_... --test
+
+tchin solde
+
+tchin paiement creer --montant 5000 --description "Commande 42"
+
+tchin paiement etat y20vcyegjk85bs
+
+tchin abonnement creer --montant 10000 --offre "Pro" --intervalle monthly
+
+tchin abonnement liste --statut active
+
+tchin abonnement resilier sub_xxx --oui
+
+tchin versement creer --montant 2000 --email client@exemple.com --oui
+
+tchin kyc creer --reference client-42
+
+tchin webhook verifier --fichier data.json
+
 tchin mcp
 ```
 
