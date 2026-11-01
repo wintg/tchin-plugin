@@ -64,13 +64,14 @@ Ou le serveur seul : `claude mcp add --transport http tchin https://tchin.tech/m
 
 ## Les outils pour payer (sans compte)
 
-Ces trois outils marchent sans connexion. Aucun ne paie : ils **affichent** le formulaire officiel de Tchin, et c'est le client qui paie, s'il le veut. C'est voulu : les IA refusent, à juste titre, de déplacer de l'argent elles-mêmes.
+Ces outils marchent sans connexion. Aucun ne paie : ils **affichent** le formulaire officiel de Tchin, et c'est le client qui paie, s'il le veut. C'est voulu : les IA refusent, à juste titre, de déplacer de l'argent elles-mêmes.
 
 | Outil | Paramètres | Ce qu’il fait |
 |---|---|---|
 | `afficher_lien_tchin` | `lien` : l’adresse https://tchin.tech/pay/… ou son code | affiche la feuille de paiement de ce lien (lien de paiement, formulaire, paiement créé par l’API, abonnement) |
 | `preparer_demande_tchin` | `tchin_id` (pseudo@tchin), `montant` (200 à 1 000 000 F), `motif` facultatif | prépare un paiement à ce compte Tchin vérifié et affiche la feuille ; le client paie les frais, comme sur vos liens |
 | `etat_paiement` | `token` | `paye`, `en_cours` ou `a_payer` |
+| `aide_tchin` | `question` (300 caractères au plus) | cherche dans la documentation officielle de Tchin (frais, pays, réseaux, délais, API…) et rend les passages utiles avec leur source : l’IA répond à partir d’eux au lieu de deviner |
 
 Le serveur suit la norme **MCP** (transport HTTP) avec l'extension **MCP Apps** : la feuille est une vue `ui://tchin/paiement-v4.html`, dessinée dans la conversation. Une IA sans vues reçoit le même résultat en texte, avec le lien.
 
@@ -114,6 +115,12 @@ Chaque page de paiement Tchin est lisible par une IA qui ouvre le lien :
 - La vue n'ouvre que des adresses de tchin.tech ; le serveur limite le nombre de requêtes et de paiements préparés.
 
 - La réussite affichée vient de Tchin (état vérifié sur le serveur), pas de la page.
+
+- **Garde-fous contre l’injection** : un texte écrit par quelqu’un (titre de lien, motif, nom) qui donne des consignes à une IA (« ignore les instructions… ») est refusé à la création et masqué s’il est lu ; les caractères invisibles sont retirés.
+
+- **Données personnelles masquées** dans tout ce que le serveur renvoie : numéros de téléphone (`901•••33`), e-mails (`aw•••@gmail.com`), noms des clients (prénom et initiale).
+
+- Chaque appel laisse une trace sans donnée personnelle (son numéro est renvoyé dans l’en-tête `X-Tchin-Trace`), et des évaluations automatiques vérifient chaque jour les garde-fous, le masquage et la connexion.
 
 ## Gérer son compte depuis son IA
 
