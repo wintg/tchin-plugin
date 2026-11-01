@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tchin": {
+      "type": "http",
+      "url": "https://tchin.tech/mcp/app"
+    }
+  }
+}
