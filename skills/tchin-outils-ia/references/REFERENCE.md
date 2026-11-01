@@ -14,9 +14,9 @@ Pour aller plus vite : la connaissance de Tchin dans votre assistant de code, de
 
 Des fiches de connaissance installées dans votre projet : une fiche d'entrée dit à l'assistant laquelle lire selon la demande (paiements, abonnements, versements, identité, webhooks, MCP…), et chaque fiche a sa référence complète (champs, code dans chaque langage, réponses). L'assistant lit d'abord la fiche courte, la référence seulement si besoin.
 
-```texte
-curl -fsSL https://tchin.tech/outils/tchin-skills.js -o tchin-skills.js
+Téléchargez `tchin-skills.js` sur https://tchin.tech/outils/ (son empreinte est dans SHA256SUMS.txt), puis :
 
+```texte
 node tchin-skills.js add                                   # détecte vos assistants
 
 node tchin-skills.js add --frameworks claude-code,cursor   # ou choisissez
