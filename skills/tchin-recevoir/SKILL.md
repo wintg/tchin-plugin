@@ -1,0 +1,24 @@
+---
+name: tchin-recevoir
+description: "Envoyer de l’argent à un client avec Tchin (POST /payouts/links) : il choisit où le recevoir dans la feuille TchinPay.receive."
+---
+
+# Tchin : Recevoir
+
+Un remboursement, des gains, un retrait de solde : votre client tape le montant sur votre site, et choisit où le recevoir dans la feuille Tchin.
+
+## Ce que couvre la référence
+- Créer un versement
+- Ce qui se passe
+- Les frais
+- Suivre et annuler
+
+Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.
+
+## Règles de sécurité (toujours)
+- Les clés (`tchin_pk_…`, `tchin_sk_…`) restent sur le SERVEUR : variables d'environnement, jamais dans le code du navigateur, d'une application mobile ni d'un dépôt Git.
+- La page ou l'application ne reçoit qu'un `token` ; elle ouvre la feuille Tchin avec ce token.
+- Ne faites jamais confiance au retour de la page : vérifiez la signature du webhook (HMAC-SHA256 avec la clé secrète, 10 minutes au plus) ou demandez l'état côté serveur.
+- Traitez chaque webhook de façon idempotente (une même `reference` peut arriver deux fois).
+- Montants en francs CFA (XOF), entiers, sans décimales.
+- Testez avec `"env": "test"` (aucun argent réel), puis passez à `"env": "live"`.
