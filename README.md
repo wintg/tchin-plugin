@@ -58,6 +58,12 @@ Le serveur MCP `tchin` (`https://tchin.tech/mcp/app`, l'édition des annuaires d
 /plugin install tchin@wintg
 ```
 
+- **Cursor** : [![Ajouter à Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://tchin.tech/mcp/cursor) ou, à la main, dans `~/.cursor/mcp.json` :
+
+```json
+{ "mcpServers": { "tchin": { "url": "https://tchin.tech/mcp" } } }
+```
+
 ## Liens
 
 - Documentation : https://doc.wintg.group/tchin/ia/
