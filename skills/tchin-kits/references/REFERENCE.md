@@ -40,7 +40,7 @@ Les kits Android, iOS, Flutter, React Native et Cordova ouvrent la même feuille
 
 ## Sans code
 
-Bientôt : WordPress et WooCommerce, Shopify, Bubble.
+Bientôt : WordPress et WooCommerce, Bubble.
 
 ---
 Source : https://doc.wintg.group/tchin/kits/
