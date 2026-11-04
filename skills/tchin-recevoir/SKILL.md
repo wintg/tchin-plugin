@@ -5,13 +5,16 @@ description: "Envoyer de l’argent à un client avec Tchin (POST /payouts/links
 
 # Tchin : Recevoir
 
-Un remboursement, des gains, un retrait de solde : votre client tape le montant sur votre site, et choisit où le recevoir dans la feuille Tchin.
+Un remboursement, des gains, un retrait de solde chez vous : vous fixez le montant, et votre client choisit où le recevoir dans la feuille Tchin, un numéro Mobile Money ou une adresse crypto. Vous n'avez rien à lui demander.
 
 ## Ce que couvre la référence
+- Recevoir ou versement direct ?
 - Créer un versement
 - Ce qui se passe
 - Les frais
 - Suivre et annuler
+- Le webhook
+- Tester
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.
 

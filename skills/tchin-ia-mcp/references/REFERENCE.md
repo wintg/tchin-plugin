@@ -49,11 +49,23 @@ https://tchin.tech/mcp
 ### Claude Code
 
 ```texte
-/plugin marketplace add wintg/tchin-plugin
+/plugin marketplace add wintg/tchin-plugin
 /plugin install tchin@wintg
 ```
 
 Ou le serveur seul : `claude mcp add --transport http tchin https://tchin.tech/mcp`.
+
+### Cursor
+
+Le bouton ouvre Cursor et y ajoute le serveur Tchin. Le lien à partager : `https://tchin.tech/mcp/cursor`. Ou à la main, dans `~/.cursor/mcp.json` :
+
+```texte
+{
+  "mcpServers": {
+    "tchin": { "url": "https://tchin.tech/mcp" }
+  }
+}
+```
 
 ### Deux adresses
 
@@ -76,13 +88,13 @@ Ces outils marchent sans connexion. Aucun ne paie : ils **affichent** le formula
 Le serveur suit la norme **MCP** (transport HTTP) avec l'extension **MCP Apps** : la feuille est une vue `ui://tchin/paiement-v4.html`, dessinée dans la conversation. Une IA sans vues reçoit le même résultat en texte, avec le lien.
 
 ```curl
-curl -X POST https://tchin.tech/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "tools/call",
-    "params": { "name": "etat_paiement", "arguments": { "token": "wintgdemo" } }
+curl -X POST https://tchin.tech/mcp \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "tools/call",
+    "params": { "name": "etat_paiement", "arguments": { "token": "wintgdemo" } }
   }'
 ```
 

@@ -9,7 +9,7 @@
       "name": "tchin",
       "source": "./",
       "description": "Tchin payments (Togo, Benin, Burkina Faso): pay a Tchin link, your account, PDF statements, payment links, reminders and WhatsApp selling.",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   ]
 }

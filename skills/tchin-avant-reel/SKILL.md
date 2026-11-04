@@ -29,7 +29,7 @@ description: "La liste à vérifier avant de passer une intégration Tchin en r�
 - [ ] La réponse `200` part en moins de 10 secondes ; le travail long se fait ensuite.
 
 ## Les anciens appels
-- [ ] Plus aucun appel à `POST /payments/{token}/charge`, `POST /payments/{token}/crypto` ni `POST /subscriptions` avec `customer_phone` : ils répondent `410` dès le 1er décembre 2026.
+- [ ] Plus aucun appel à `POST /payments/{token}/charge`, `POST /payments/{token}/crypto` ni `POST /subscriptions` avec `customer_phone` : ces méthodes sont retirées de l'API et répondent `410` (`"error": "method_removed"`) : ouvrez la feuille avec `TchinPay.open({ token })`.
 
 ## Le premier paiement réel
 - [ ] Un petit paiement réel (100 F par exemple) avec votre propre numéro, du début à la fin : feuille, webhook, commande payée, argent sur votre solde du bon pays.

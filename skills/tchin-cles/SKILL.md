@@ -5,14 +5,16 @@ description: "Clés API Tchin, en-têtes, mode test ou live, réponses d’erreu
 
 # Tchin : Clés, modes et erreurs
 
-Tout ce qui est commun à chaque appel : l'adresse, les en-têtes, le mode test, les erreurs et les limites.
+Tout ce qui est commun à chaque appel : l'adresse, les formats, les en-têtes, le mode test, les erreurs, les limites, et la bonne façon de réessayer.
 
 ## Ce que couvre la référence
-- L'adresse de l'API
+- L'adresse et les formats
 - Les en-têtes
+- Vos clés
 - Mode test et mode réel
 - Les réponses
 - Les limites
+- Bonnes pratiques
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.
 

@@ -1,7 +1,7 @@
 {
   "name": "tchin",
   "displayName": "Tchin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tchin payments (Togo, Benin, Burkina Faso): pay a Tchin link on tchin.tech, read your account and history, PDF statements, payment links, sales, reminders and WhatsApp selling. In French.",
   "author": {
     "name": "Wintg",

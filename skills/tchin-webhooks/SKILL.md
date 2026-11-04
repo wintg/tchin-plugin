@@ -5,12 +5,14 @@ description: "Webhooks Tchin : format, en-têtes Tchin-Signature, vérification 
 
 # Tchin : Webhooks et signature
 
-À chaque changement d'état, Tchin appelle votre callback_url. Vérifiez la signature avant de faire confiance au contenu.
+À chaque changement d'état, Tchin appelle votre callback_url. Vérifiez la signature avant de croire le contenu, répondez vite, et traitez chaque événement une seule fois.
 
 ## Ce que couvre la référence
+- Quand un webhook part
 - Le format
 - Vérifier la signature
 - Répondre
+- Doublons et ordre
 - Tester
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.

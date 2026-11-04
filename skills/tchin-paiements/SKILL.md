@@ -5,13 +5,16 @@ description: "Encaisser un paiement unique avec Tchin : POST /payments, ouvrir l
 
 # Tchin : Paiements
 
-Un paiement unique : votre serveur le crée, votre page ouvre la feuille Tchin, le client paie sans quitter votre site.
+Un paiement unique : votre serveur le crée, votre page ouvre la feuille Tchin, le client paie sans quitter votre site, et votre serveur est prévenu par un webhook signé.
 
 ## Ce que couvre la référence
+- Le cycle d'un paiement
 - Créer un paiement
 - Ouvrir la feuille
 - Suivre l'état
-- Les frais et le montant payé
+- Les frais et le montant reçu
+- Bonnes pratiques
+- Erreurs courantes
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.
 

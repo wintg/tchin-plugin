@@ -2,11 +2,11 @@
 
 [Tchin](https://tchin.tech) est une plateforme de paiement d'Afrique de l'Ouest (Togo, Bénin, Burkina Faso) : Mobile Money, compte Tchin et crypto, en francs CFA. Ce plugin relie Claude à Tchin : payer un lien Tchin sur tchin.tech, lire son compte, faire un relevé PDF, créer des liens de paiement, relancer les impayés et vendre sur WhatsApp. Tchin est une solution de [Wintg](https://wintg.group), à Lomé.
 
-*English summary: Tchin is a West African payment platform (Togo, Benin, Burkina Faso). This plugin connects Claude to Tchin's MCP server and adds 22 French-language skills: for every Tchin user (using Tchin well, bookkeeping and PDF statements, payment reminders, selling on WhatsApp with payment links) and for developers integrating the Tchin API (getting started, keys, payments, subscriptions, payouts, identity checks, webhooks, testing without real money, go-live checklist). Payments always happen on tchin.tech; the plugin never sends, withdraws or transfers money.*
+*English summary: Tchin is a West African payment platform (Togo, Benin, Burkina Faso). This plugin connects Claude to Tchin's MCP server and adds 21 French-language skills: for every Tchin user (using Tchin well, bookkeeping and PDF statements, payment reminders, selling on WhatsApp with payment links) and for developers integrating the Tchin API (getting started, keys, payments, subscriptions, payouts, identity checks, webhooks, testing without real money, go-live checklist). Payments always happen on tchin.tech; the plugin never sends, withdraws or transfers money.*
 
 ## Ce que contient le plugin
 
-Le serveur MCP `tchin` (`https://tchin.tech/mcp/app`, l'édition des annuaires du serveur MCP de Tchin) et 22 skills.
+Le serveur MCP `tchin` (`https://tchin.tech/mcp/app`, l'édition des annuaires du serveur MCP de Tchin) et 21 skills.
 
 **Pour tous les utilisateurs de Tchin** (marchands et particuliers) :
 
@@ -29,7 +29,7 @@ Le serveur MCP `tchin` (`https://tchin.tech/mcp/app`, l'édition des annuaires d
 | `tchin-recevoir`, `tchin-versements-directs` | envoyer de l'argent à un client ; verser à un numéro ou une adresse connue |
 | `tchin-kyc`, `tchin-webhooks` | la vérification d'identité ; les webhooks et leur signature |
 | `tchin-ia-mcp`, `tchin-outils-ia` | le serveur MCP ; la CLI, l'Agent Toolkit et les skills |
-| `tchin-kits`, `tchin-reference-api`, `tchin-migration`, `tchin-faq` | les kits, tous les points d'entrée, le calendrier, les questions fréquentes |
+| `tchin-kits`, `tchin-reference-api`, `tchin-faq` | les kits, tous les points d'entrée, les questions fréquentes |
 | `tchin-tester` | tester sans argent réel : mode test, comptes test, webhooks en local |
 | `tchin-avant-reel` | la liste à vérifier avant de passer en réel |
 

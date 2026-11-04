@@ -5,17 +5,24 @@ description: "Questions fréquentes sur Tchin : où arrive l’argent, délais, 
 
 # Tchin : Questions fréquentes
 
-## Où arrive l'argent ?
+Les questions que les développeurs et les marchands nous posent le plus, avec des réponses courtes. Une autre question ? Écrivez-nous, ou demandez à Letou dans votre compte.
 
 ## Ce que couvre la référence
 - Où arrive l'argent ?
 - Quand le paiement est-il confirmé ?
 - Qui paie les frais ?
 - Quels pays ?
-- Le client a fermé la feuille avant de payer : que faire ?
-- Comment rembourser un client ?
-- Comment être sûr qu'un paiement est vrai ?
+- Mon paiement s'affiche en « Mode test » en production
 - Comment tester sans argent ?
+- Le client a fermé la feuille avant de payer : que faire ?
+- Le paiement a échoué : pourquoi ?
+- Je ne reçois pas les webhooks
+- La signature ne correspond pas
+- Comment être sûr qu'un paiement est vrai ?
+- Comment rembourser un client ?
+- Ma clé secrète a fuité
+- Mon intégration répond « 410 »
+- Je n'ai pas de développeur
 - Une autre question ?
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.

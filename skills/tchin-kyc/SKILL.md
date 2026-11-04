@@ -5,12 +5,15 @@ description: "Vérification d’identité Tchin (KYC) : créer une vérification
 
 # Tchin : Vérification d'identité
 
-Vos clients prouvent leur identité en une minute : photo de la pièce, selfie avec un contrôle de vivacité. Tchin vérifie et vous donne le verdict. 75 F par vérification, pris sur votre solde Tchin.
+Vos clients prouvent leur identité en une minute : photo de la pièce, selfie avec un contrôle de vivacité. Tchin compare, lit la pièce et vous donne le verdict. 75 F par vérification en mode réel, pris sur votre solde Tchin ; gratuite en mode test.
 
 ## Ce que couvre la référence
+- Le principe
 - Créer une vérification
 - Ouvrir la fenêtre
-- Le résultat
+- Lire le résultat
+- Le webhook
+- Tester
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.
 

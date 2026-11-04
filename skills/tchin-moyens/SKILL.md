@@ -5,12 +5,13 @@ description: "Les moyens de paiement Tchin par pays (Togo, Bénin, Burkina Faso)
 
 # Tchin : Moyens de paiement
 
-La feuille propose les moyens que votre application accepte (réglages de l'application sur la page API de Tchin). Le client choisit en haut de la feuille.
+La feuille propose les moyens que votre application accepte (ses réglages, sur la page API de Tchin). Le client choisit en haut de la feuille ; elle se souvient de son dernier choix sur son appareil.
 
 ## Ce que couvre la référence
 - Mobile Money
 - Crypto
 - Compte Tchin
+- Lire les moyens ouverts : GET /methods
 - Quels moyens proposer ?
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.

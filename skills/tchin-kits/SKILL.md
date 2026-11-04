@@ -12,7 +12,6 @@ Chaque kit contient le code, un exemple et la marche à suivre. Sans dépendance
 - Web
 - Serveur
 - Applications mobiles
-- Sans code
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.
 

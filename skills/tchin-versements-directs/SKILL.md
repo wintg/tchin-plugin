@@ -5,11 +5,12 @@ description: "Verser directement à un numéro Mobile Money ou à une adresse cr
 
 # Tchin : Versements directs
 
-Vous connaissez déjà le numéro ou l'adresse (vos vendeurs, vos livreurs) : versez directement, sans feuille.
+Vous connaissez déjà le numéro ou l'adresse (vos vendeurs, vos livreurs, vos partenaires) : versez directement depuis votre solde Tchin, sans feuille et sans rien demander au destinataire.
 
 ## Ce que couvre la référence
 - Vers un numéro Mobile Money
 - Vers une adresse crypto
+- Le webhook
 - Votre solde
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.

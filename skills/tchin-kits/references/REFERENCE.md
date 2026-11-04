@@ -38,9 +38,6 @@ Une intégration a toujours deux côtés :
 
 Les kits Android, iOS, Flutter, React Native et Cordova ouvrent la même feuille dans une vue web, avec les mêmes rappels (`onSuccess`, `onPending`, `onClose`) et une fonction `receive` pour Recevoir. Les portefeuilles crypto et les applications de paiement s'ouvrent dans le système.
 
-## Sans code
-
-Bientôt : WordPress et WooCommerce, Bubble.
 
 ---
 Source : https://doc.wintg.group/tchin/kits/

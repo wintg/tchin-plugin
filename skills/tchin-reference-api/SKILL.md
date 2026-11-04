@@ -1,20 +1,23 @@
 ---
 name: tchin-reference-api
-description: "La liste de tous les points d’entrée de l’API Tchin (https://tchin.tech/api/v1)."
+description: "La liste de tous les points d’entrée de l’API Tchin (https://tchin.tech/api/v1), et les méthodes retirées (410) avec le passage à la feuille."
 ---
 
 # Tchin : Référence de l'API
 
-Tous les points d'entrée, sur https://tchin.tech/api/v1, avec les en-têtes TCHIN-PUBLIC-KEY et TCHIN-PRIVATE-KEY.
+Tous les points d'entrée, sur https://tchin.tech/api/v1, avec les en-têtes TCHIN-PUBLIC-KEY et TCHIN-PRIVATE-KEY. Chaque ligne renvoie à sa page, où tout est détaillé.
 
 ## Ce que couvre la référence
 - Paiements
 - Abonnements
 - Versements
 - Vérification d'identité
+- Paiement en caisse
 - Compte
+- Kits web
+- Webhooks
 - Serveur MCP (IA)
-- Arrêtés le 30 novembre 2026
+- Méthodes retirées
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.
 

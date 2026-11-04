@@ -5,14 +5,18 @@ description: "Abonnements Tchin (paiements récurrents) : créer, lister, résil
 
 # Tchin : Abonnements
 
-Un montant fixe chaque mois, trimestre, semestre ou année. Le client accepte et choisit son moyen la première fois ; Tchin s'occupe ensuite de chaque échéance.
+Un montant fixe chaque mois, trimestre, semestre ou année. Le client donne son accord et choisit son moyen la première fois, dans la feuille ; Tchin s'occupe ensuite de chaque échéance, des rappels et des relances.
 
 ## Ce que couvre la référence
+- Le principe
 - Créer un abonnement
+- L'objet abonnement
 - Chaque échéance
+- Les états
 - Résilier depuis votre site
 - Lister et suivre
-- Les événements
+- Les webhooks
+- Tester
 
 Lisez `references/REFERENCE.md` pour les champs exacts, le code dans chaque langage (cURL, PHP, Node.js, Python, Java, Go) et les réponses.
 

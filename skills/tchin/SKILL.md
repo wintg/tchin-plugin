@@ -5,7 +5,7 @@ description: "Point d’entrée Tchin : encaisser (Mobile Money, crypto, compte 
 
 # Tchin : démarrer
 
-Tchin (tchin.tech, une solution Wintg) encaisse par Mobile Money au Togo, au Bénin et au Burkina Faso, en crypto (USDT, TRX, BNB, SOL) et par compte Tchin.
+Tchin (tchin.tech, une solution Wintg) encaisse par Mobile Money au Togo, au Bénin et au Burkina Faso, en crypto (USDT, TRX, BNB, SOL, GRAM) et par compte Tchin.
 
 ## Le principe
 1. Votre **serveur** crée l'opération avec vos clés : `POST https://tchin.tech/api/v1/payments` (en-têtes `TCHIN-PUBLIC-KEY`, `TCHIN-PRIVATE-KEY`). Tchin rend un `token`.
@@ -27,7 +27,7 @@ Tchin (tchin.tech, une solution Wintg) encaisse par Mobile Money au Togo, au Bé
 | Serveur MCP : payer dans ChatGPT / Claude, gérer son compte (historique, relevé PDF, envois confirmés) | `tchin-ia-mcp` |
 | Kits (PHP, Node, Python, Java, Go, Android, iOS, Flutter, React Native, Cordova) | `tchin-kits` |
 | Tous les points d'entrée | `tchin-reference-api` |
-| Anciens appels arrêtés le 1er décembre 2026 | `tchin-migration` |
+| Méthodes retirées (réponse 410) et passer à la feuille | `tchin-reference-api` |
 | Questions fréquentes | `tchin-faq` |
 | Agent Toolkit, CLI tchin, Agent Skills | `tchin-outils-ia` |
 | Tester sans argent réel (mode test, comptes test, webhooks en local) | `tchin-tester` |
